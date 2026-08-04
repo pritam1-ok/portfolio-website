@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Space+Grotesk:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  background-color: #030008;
+  font-family: 'Outfit', sans-serif;
+  color: #e2e8f0;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Shiny Metallic Gold Gradient Text */
+.metallic-gold {
+  background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 25%, #f59e0b 50%, #d97706 75%, #b45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+/* Speech Bubble Card Style */
+.speech-bubble-section {
+  background: radial-gradient(circle at top left, rgba(27, 10, 56, 0.95) 0%, rgba(13, 3, 28, 0.95) 100%);
+  border: 2px solid rgba(245, 158, 11, 0.3);
+  border-radius: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 2px 5px rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 10;
+}
+
+/* Galaxy Starfield Background */
+.galaxy-bg {
+  position: fixed;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: 
+    radial-gradient(1.5px 1.5px at 20px 30px, #ffffff, transparent),
+    radial-gradient(2px 2px at 80px 70px, #ffffff, transparent),
+    radial-gradient(2.5px 2.5px at 150px 180px, #e9d5ff, transparent),
+    radial-gradient(1.5px 1.5px at 250px 90px, #ffffff, transparent),
+    radial-gradient(3px 3px at 300px 250px, #c084fc, transparent);
+  background-size: 150px 150px, 250px 250px, 350px 350px, 100px 100px, 400px 400px;
+  animation: rotateGalaxy 250s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes rotateGalaxy {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* --- Realistic 3D CSS Planets --- */
+.orbit-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  z-index: 1; /* Sits behind content, above galaxy */
+  pointer-events: none;
+}
+
+.planet-wrapper {
+  position: absolute;
+  top: 0; left: 0;
+  animation: revolve var(--duration) linear infinite;
+}
+
+.planet {
+  width: var(--size);
+  height: var(--size);
+  margin-top: calc(var(--size) / -2);
+  margin-left: calc(var(--size) / -2);
+  border-radius: 50%;
+  /* Creates the deep 3D shadow on the unlit side of the planet */
+  box-shadow: inset -25px -25px 40px rgba(0,0,0,0.9), inset -10px -10px 20px rgba(0,0,0,0.8), 0 0 20px rgba(255,255,255,0.05);
+}
+
+/* Planet Surface Textures/Colors */
+.planet-earth { background: radial-gradient(circle at 30% 30%, #34d399 0%, #3b82f6 40%, #1e3a8a 80%, #000 100%); }
+.planet-mars { background: radial-gradient(circle at 30% 30%, #fb923c 0%, #ea580c 40%, #7c2d12 80%, #000 100%); }
+.planet-jupiter { background: radial-gradient(circle at 30% 30%, #fde047 0%, #d97706 40%, #78350f 80%, #000 100%); }
+.planet-purple { background: radial-gradient(circle at 30% 30%, #c084fc 0%, #7e22ce 40%, #3b0764 80%, #000 100%); }
+.planet-neptune { background: radial-gradient(circle at 30% 30%, #38bdf8 0%, #0284c7 40%, #082f49 80%, #000 100%); }
+.planet-venus { background: radial-gradient(circle at 30% 30%, #fef08a 0%, #eab308 40%, #713f12 80%, #000 100%); }
+.planet-moon { background: radial-gradient(circle at 30% 30%, #e2e8f0 0%, #94a3b8 40%, #334155 80%, #000 100%); }
+.planet-emerald { background: radial-gradient(circle at 30% 30%, #6ee7b7 0%, #10b981 40%, #064e3b 80%, #000 100%); }
+.planet-crimson { background: radial-gradient(circle at 30% 30%, #fca5a5 0%, #dc2626 40%, #7f1d1d 80%, #000 100%); }
+
+@keyframes revolve {
+  from { transform: rotate(0deg) translateX(var(--radius)) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(var(--radius)) rotate(-360deg); }
+}
+@keyframes revolve-reverse {
+  from { transform: rotate(360deg) translateX(var(--radius)) rotate(-360deg); }
+  to { transform: rotate(0deg) translateX(var(--radius)) rotate(0deg); }
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(3, 0, 8, 0.8);
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(245, 158, 11, 0.4);
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 158, 11, 0.7);
+}
