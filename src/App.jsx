@@ -373,7 +373,7 @@ const App = () => {
             <div className="lg:col-span-4 flex flex-col items-center lg:items-start relative pt-4">
               <div className="relative bg-[#130724]/95 border-2 border-purple-500/60 p-5 rounded-2xl shadow-[0_0_25px_rgba(168,85,247,0.3)] backdrop-blur-md w-full max-w-[280px] text-left mb-6 z-20">
                 <p className="text-xs text-gray-200 leading-relaxed font-light">
-                  Hi! I'm <strong className="text-white font-medium">Pritam Kumar Ghosh</strong>, a Software Engineer specializing in MERN Full-Stack & Agentic AI. Explore my portfolio below!
+                  Hi! I'm <strong className="text-white font-medium">Pritam Kumar Ghosh</strong>, a Software Engineer specializing in MERN Full-Stack & AI/ML Development. Explore my portfolio below!
                 </p>
                 <div className="mt-4 pt-3 border-t border-purple-900/40 text-center relative z-20">
                   <a href="#skills" className="text-[11px] text-amber-400 font-bold tracking-widest uppercase animate-pulse inline-block hover:text-amber-300 transition-colors relative z-20">
