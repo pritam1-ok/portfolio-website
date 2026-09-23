@@ -135,12 +135,16 @@ const App = () => {
       items: ["Java", "JavaScript", "Python", "SQL"]
     },
     {
-      title: "Frameworks & Libraries",
-      items: ["Node.js", "CrewAI", "Agentic AI", "Generative AI", "React", "Express", "Tailwind CSS"]
+      title: "AI/ML Development Skills",
+      items: ["NumPy" ," Pandas" ,"Scikit-learn" ,"PyTorch" ," TensorFlow" ," Keras" ,"Agentic AI", "Generative AI", " LangChain", "RAG", "LangGraph" ," OpenCV"]
+    },
+    {
+      title: "Full Stack Development Skills",
+      items: ["Node.js" ,"React", "Express.js", "Tailwind CSS" ,"REST APIs" ," Microservices" ," Docker"]
     },
     {
       title: "Databases, Tools & Platforms",
-      items: ["MySQL", "MongoDB", "Git", "GitHub"]
+      items: ["MySQL", "MongoDB", "Git", "GitHub", "CrewAI"]
     },
     {
       title: "Soft Skills",
